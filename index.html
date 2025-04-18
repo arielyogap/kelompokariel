@@ -1,23 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universitas esa unggul</title>
+    <title>Universitas Esa Unggul</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         footer {
-          background: #222;
-          color: white;
-          text-align: center;
-          padding: 15px;
-          margin-top: 40px;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
         }
-      </style>
+    </style>
 </head>
 <body class="bg-gray-800 text-white">
+
     <!-- Navbar -->
     <nav class="bg-blue-900 p-4">
         <div class="container mx-auto flex justify-between items-center">
@@ -31,10 +31,6 @@
                 </ul>
             </div>
             <div class="flex items-center space-x-4">
-                <!--<a href="#" class="hover:underline">BERANDA</a>
-                <a href="#" class="hover:underline">TENTANG KAMI</a>
-                <a href="#" class="hover:underline">TIPS KULIAH</a>
-                <a href="#" class="hover:underline">KONTAK</a>-->
                 <a href="#" class="hover:underline"><i class="fas fa-search"></i></a>
             </div>
         </div>
@@ -42,36 +38,61 @@
 
     <!-- Main Content -->
     <div class="container mx-auto mt-4">
-        <!-- Hero Section -->
-        <div class="relative">
-            <img src="./foto bertiga.jpg" alt="Microsculpture - The insect photography of Levon Biss" class="w-full h-96 object-cover">
-            <div class="absolute inset-0 flex items-center justify-between px-4">
-                <button class="text-white text-2xl"><i class="fas fa-chevron-left"></i></button>
-                <button class="text-white text-2xl"><i class="fas fa-chevron-right"></i></button>
+
+        <!-- Hero Carousel -->
+        <div class="relative overflow-hidden h-96">
+            <div id="heroCarousel" class="flex transition-transform duration-500 ease-in-out h-96">
+                <div class="min-w-full">
+                    <img src="./foto bertiga.jpg" class="w-full h-96 object-cover" alt="Foto Bertiga">
+                </div>
+                <div class="min-w-full">
+                    <img src="./aula esgul.jpg" class="w-full h-96 object-cover" alt="Foto Bareng 2">
+                </div>
+                <div class="min-w-full">
+                    <img src="./gedung esgul.jpg" class="w-full h-96 object-cover" alt="Foto Kampus">
+                </div>
+                <div class="min-w-full">
+                    <img src="./logo esgul.jpg" class="w-full h-96 object-cover" alt="Foto Kampus">
+                </div>
+                <div class="min-w-full">
+                    <img src="./perpus esgul.jpg" class="w-full h-96 object-cover" alt="Foto Kampus">
+                </div>
             </div>
+
+            <!-- Tombol Navigasi -->
+            <button onclick="prevHero()" class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-3xl px-4 bg-black bg-opacity-50 hover:bg-opacity-75 z-10">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="nextHero()" class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-3xl px-4 bg-black bg-opacity-50 hover:bg-opacity-75 z-10">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Caption -->
             <div class="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50">
                 <h2 class="text-2xl font-bold">UNIVERSITAS ESA UNGGUL</h2>
                 <p>(lokasi kampus) Jl. Citra Raya Boulevard No.01 BlokS No.25, Panongan, Kec. Panongan, Kabupaten Tangerang, Banten 15711.</p>
             </div>
         </div>
-    </div>
 
         <!-- News and Events Section -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+
             <!-- News Section -->
             <div class="col-span-2 bg-white text-black p-4">
                 <h3 class="text-xl font-bold mb-4">FASILITAS KAMPUS.</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
-                        <img src="./aula esgul.jpg" alt="Oxford researchers awarded ARIA funding to develop safety-first AI" class="w-full h-40 object-cover mb-2">
+                        <img src="./aula esgul.jpg" alt="Auditorium" class="w-full h-40 object-cover mb-2">
                         <p>AUDITORIUM UNIVERSITAS ESA UNGGUL</p>
                     </div>
                     <div>
-                        <img src="./logo esgul.jpg" alt="Oxford Humanities team delivers framework for tackling modern slavery and human trafficking" class="w-full h-40 object-cover mb-2">
-                        <p>FASILITAS KAMPUS LAINNYA</p>
+                        <a href="https://www.instagram.com/reel/DIkZRWIyH2-/?igsh=NThrYnN3eTFubm1r" target="_blank">
+                            <img src="./foto bertiga.jpg" alt="Fasilitas Kampus Lainnya" class="w-full h-40 object-cover mb-2 hover:opacity-80 transition duration-300">
+                            <p class="text-blue-700 underline mt-1">FASILITAS KAMPUS LAINNYA</p>
+                        </a>
                     </div>
                     <div>
-                        <img src="./perpus esgul.jpg" alt="Building on expertise" class="w-full h-40 object-cover mb-2">
+                        <img src="./perpus esgul.jpg" alt="Perpustakaan" class="w-full h-40 object-cover mb-2">
                         <p>PERPUSTAKAAN UNIVERSITAS ESA UNGGUL</p>
                     </div>
                 </div>
@@ -103,15 +124,43 @@
                                 <p class="font-bold">MALAM KEAKRABAN</p>
                                 <p>soon</p>
                             </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
 
-    
+        <!-- Footer -->
         <footer>
             <p>© 2025 Ariel, Isal, Darren | Mahasiswa Esa Unggul</p>
-          </footer>
+        </footer>
 
-    </body>
-          
+        <!-- Script -->
+        <script>
+            let currentHero = 0;
+            const totalHeroSlides = document.querySelectorAll('#heroCarousel > div').length;
+
+            function updateHeroCarousel() {
+                const heroCarousel = document.getElementById('heroCarousel');
+                const slideWidth = heroCarousel.offsetWidth;
+                heroCarousel.style.transform = `translateX(-${currentHero * slideWidth}px)`;
+            }
+
+            function nextHero() {
+                currentHero = (currentHero + 1) % totalHeroSlides;
+                updateHeroCarousel();
+            }
+
+            function prevHero() {
+                currentHero = (currentHero - 1 + totalHeroSlides) % totalHeroSlides;
+                updateHeroCarousel();
+            }
+
+            window.addEventListener('resize', updateHeroCarousel);
+            window.addEventListener('load', updateHeroCarousel);
+            setInterval(nextHero, 3000);
+        </script>
+
+    </div>
+</body>
+</html>
